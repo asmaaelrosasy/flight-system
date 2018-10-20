@@ -14,13 +14,13 @@ export class NavbarComponent implements OnInit {
   }
 
   NavigateToScreen1() {
-    (document.getElementById('contact') as HTMLInputElement).setAttribute('style', 'display:none');
+    // (document.getElementById('contact') as HTMLInputElement).setAttribute('style', 'display:none');
     this.router.navigate(['screen1']);
   }
 
   NavigateToScreen3() {
     console.log('asmo4a');
-    (document.getElementById('screen1') as HTMLInputElement).setAttribute('style', 'display:none');
+    // (document.getElementById('screen1') as HTMLInputElement).setAttribute('style', 'display:none');
     this.router.navigate(['screen3']);
   }
 }
