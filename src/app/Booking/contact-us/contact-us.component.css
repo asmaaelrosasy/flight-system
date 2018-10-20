@@ -1,0 +1,12 @@
+#contact .card:hover i,
+#contact .card:hover h4 {
+  color: #87d37c;
+}
+
+.contactus {
+  margin-top: 6%;
+}
+
+h3 {
+    color: #28a745;
+}
