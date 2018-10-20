@@ -17,7 +17,7 @@ import { BookingModule } from './Booking/Booking.module';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    BookingModule,
+    BookingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
