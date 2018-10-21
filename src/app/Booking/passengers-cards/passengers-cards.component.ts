@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PassengersCardsComponent implements OnInit {
 
+  nOfPassengers: number;
+  Arr = Array;
+
   constructor() { }
 
   ngOnInit() {
+    this.nOfPassengers = parseInt(localStorage.getItem('nop'), 10);
   }
 
 }

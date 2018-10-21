@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PassengerItemComponent implements OnInit {
 
+  passengersList = [];
+
   constructor() { }
 
+
   ngOnInit() {
+
+    this.passengersList = JSON.parse(localStorage.getItem('list'));
+
+    for (let i = 0; i < this.passengersList.length; i++) {
+      (document.getElementsByClassName('fname')[i] as HTMLParagraphElement).innerHTML = this.passengersList[i].fn;
+      (document.getElementsByClassName('lname')[i] as HTMLParagraphElement).innerHTML = this.passengersList[i].ln;
+      (document.getElementsByClassName('bdate')[i] as HTMLParagraphElement).innerHTML = this.passengersList[i].bd;
+    }
   }
 
 }
+
+

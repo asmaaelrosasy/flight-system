@@ -41,6 +41,10 @@ h2{
     color: red;
 }
 
+hr{
+    height: 2px;
+}
+
 /* Login form */
 .imgcontainer {
     text-align: center;

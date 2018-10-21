@@ -1,6 +1,4 @@
 <div class="container">
         <h2>Passengers</h2>
-<app-passenger-item></app-passenger-item>
-<app-passenger-item></app-passenger-item>
-<app-passenger-item></app-passenger-item>
+<app-passenger-item *ngFor="let i of Arr(nOfPassengers).fill(1)"></app-passenger-item>
 </div>
