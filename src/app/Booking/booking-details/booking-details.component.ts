@@ -40,16 +40,17 @@ export class BookingDetailsComponent implements OnInit {
       from: new FormControl('', Validators.required),
       to: new FormControl('', Validators.required),
       date: new FormControl('', Validators.required),
-      nop: new FormControl('', Validators.required)
+      nop: new FormControl('', Validators.compose([Validators.required, Validators.min(1), Validators.max(10)]))
     });
 
     // validation on passenger datails form
     this.PassengerForm = new FormGroup({
-      fn: new FormControl('', Validators.required),
-      ln: new FormControl('', Validators.required),
+      fn: new FormControl('', Validators.compose([Validators.required, Validators.pattern('^[a-zA-Z]+$')])),
+      ln: new FormControl('', Validators.compose([Validators.required, Validators.pattern('^[a-zA-Z]+$')])),
       date: new FormControl('', Validators.required),
-      phone: new FormControl('', Validators.compose([Validators.required]))
+      phone: new FormControl('', Validators.compose([Validators.required, Validators.pattern('0[0-9]{10}')]))
     });
+
   }
 
   // function to show flight details form

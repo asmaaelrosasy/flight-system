@@ -8,7 +8,6 @@ import { SharedModule } from './shared/shared.module';
 import { BookingModule } from './Booking/Booking.module';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

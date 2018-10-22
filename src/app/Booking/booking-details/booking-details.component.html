@@ -15,12 +15,14 @@
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname"  formControlName="uname" required>
-      <p class="help-block" *ngIf="loginForm.get('uname').touched && loginForm.controls['uname'].errors?.required">This field is required</p>
+      <input type="text" placeholder="Enter Username" name="uname" formControlName="uname" required>
+      <p class="help-block" *ngIf="loginForm.get('uname').touched && loginForm.controls['uname'].errors?.required">This
+        field is required</p>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw"  formControlName="psw" required>
-      <p class="help-block" *ngIf="loginForm.get('psw').touched && loginForm.controls['psw'].errors?.required">This field is required</p>
+      <input type="password" placeholder="Enter Password" name="psw" formControlName="psw" required>
+      <p class="help-block" *ngIf="loginForm.get('psw').touched && loginForm.controls['psw'].errors?.required">This
+        field is required</p>
 
       <button type="button" (click)="loginClicked()">Login</button>
       <label>
@@ -39,19 +41,24 @@
 
         <label for="from"><b>From</b></label>
         <input type="text" placeholder="Enter Location" name="from" formControlName="from" required>
-        <p class="help-block" *ngIf="flightForm.get('from').touched && flightForm.controls['from'].errors?.required">This field is required</p>
+        <p class="help-block" *ngIf="flightForm.get('from').touched && flightForm.controls['from'].errors?.required">This
+          field is required</p>
 
         <label for="to"><b>To</b></label>
         <input type="text" placeholder="Enter Destination" name="to" formControlName="to" required>
-        <p class="help-block" *ngIf="flightForm.get('to').touched && flightForm.controls['to'].errors?.required">This field is required</p>
+        <p class="help-block" *ngIf="flightForm.get('to').touched && flightForm.controls['to'].errors?.required">This
+          field is required</p>
 
         <label for="date"><b>Date</b></label>
         <input type="date" placeholder="Enter Date" name="date" formControlName="date" required>
-        <p class="help-block" *ngIf="flightForm.get('date').touched && flightForm.controls['date'].errors?.required">This field is required</p>
+        <p class="help-block" *ngIf="flightForm.get('date').touched && flightForm.controls['date'].errors?.required">This
+          field is required</p>
 
         <label for="nop"><b>Number of passengers</b></label>
-        <input id="PassengersNo" type="number" placeholder="Enter Number of passengers" min="1" max="10" name="nop" formControlName="nop" required>
-        <p class="help-block" *ngIf="flightForm.get('nop').touched && flightForm.controls['nop'].errors?.required">This field is required</p>
+        <input id="PassengersNo" type="number" placeholder="Enter Number of passengers" name="nop" formControlName="nop"
+          required>
+        <p class="help-block" *ngIf="flightForm.get('nop').touched && flightForm.controls['nop'].errors?.required">This
+          field is required</p>
 
         <button type="submit" (click)="flighClicked()">Submit</button>
       </div>
@@ -61,31 +68,35 @@
 
   <!-- Passenger Details form -->
   <div *ngIf="flightSubmitted">
-  <form [formGroup]="PassengerForm">
-    <div class="container">
-      <h2>Passengers Dtails</h2>
-      <div *ngFor="let i of Arr(nOfPassengers).fill(1)">
-      <label for="fn"><b>First name</b></label>
-      <input class="fname" type="text" placeholder="Enter First Name" name="fn" formControlName="fn" required>
-      <p class="help-block" *ngIf="PassengerForm.get('fn').touched && PassengerForm.controls['fn'].errors?.required">This field is required</p>
+    <form [formGroup]="PassengerForm">
+      <div class="container">
+        <h2>Passengers Dtails</h2>
+        <div *ngFor="let i of Arr(nOfPassengers).fill(1)">
+          <label for="fn"><b>First name</b></label>
+          <input class="fname" type="text" placeholder="Enter First Name" name="fn" formControlName="fn" required>
+          <p class="help-block" *ngIf="PassengerForm.get('fn').touched && PassengerForm.controls['fn'].errors?.required">This
+            field is required</p>
 
-      <label for="ln"><b>Last name</b></label>
-      <input class="lname" type="text" placeholder="Enter Last Name" name="ln" formControlName="ln" required>
-      <p class="help-block" *ngIf="PassengerForm.get('ln').touched && PassengerForm.controls['ln'].errors?.required">This field is required</p>
+          <label for="ln"><b>Last name</b></label>
+          <input class="lname" type="text" placeholder="Enter Last Name" name="ln" formControlName="ln" required>
+          <p class="help-block" *ngIf="PassengerForm.get('ln').touched && PassengerForm.controls['ln'].errors?.required">This
+            field is required</p>
 
-      <label for="date"><b>Birthdate</b></label>
-      <input class="bdate" type="date" placeholder="Enter Birthdate" name="date" formControlName="date" required>
-      <p class="help-block" *ngIf="PassengerForm.get('date').touched && PassengerForm.controls['date'].errors?.required">This field is required</p>
+          <label for="date"><b>Birthdate</b></label>
+          <input class="bdate" type="date" placeholder="Enter Birthdate" name="date" formControlName="date" required>
+          <p class="help-block" *ngIf="PassengerForm.get('date').touched && PassengerForm.controls['date'].errors?.required">This
+            field is required</p>
 
-      <label for="phone"><b>Phone number</b></label>
-      <input type="text" placeholder="Enter Phone Number" name="phone" formControlName="phone" required>
-      <p class="help-block" *ngIf="PassengerForm.get('phone').touched && PassengerForm.controls['phone'].errors?.required">This field is required</p>
-      <hr>
-    </div>
-      <button type="submit" (click)="passengerClicked()" >Submit</button>
-    </div>
-  </form>
-</div>
+          <label for="phone"><b>Phone number</b></label>
+          <input type="text" placeholder="Enter Phone Number" name="phone" formControlName="phone" required>
+          <p class="help-block" *ngIf="PassengerForm.get('phone').touched && PassengerForm.controls['phone'].errors?.required">This
+            field is required</p>
+          <hr>
+        </div>
+        <button type="submit" (click)="passengerClicked()">Submit</button>
+      </div>
+    </form>
+  </div>
   <!-- End Passenger Details form -->
 
 </body>
